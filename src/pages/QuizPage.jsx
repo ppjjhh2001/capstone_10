@@ -14,37 +14,18 @@ function QuizPage() {
 
 
   const handleOptionClick = (type) => {
-    // 1. 버튼 클릭이 잘 되는지 확인
-    console.log(`✅ ----------------------------------`);
-    console.log(`현재 질문 ID: ${currentQuestionId}`);
-    console.log(`클릭! 선택된 타입: ${type}`);
-
     const newAnswers = [...userAnswers, type];
     setUserAnswers(newAnswers);
 
-    // 2. 답변이 정상적으로 쌓이는지 확인
-    console.log(`현재까지의 답변 (${newAnswers.length}개):`, newAnswers);
-
-    // 3. 마지막 질문인지 아닌지 확인
     if (currentQuestionId < questions.length) {
-      console.log("아직 질문이 남았습니다. 다음 질문으로 넘어갑니다.");
       navigate(`/quiz/${currentQuestionId + 1}`, {
         state: { answers: newAnswers }
       });
     } else {
-      console.log("🚩 마지막 질문입니다! 결과 계산을 시작합니다.");
-
       const finalType = calculateResult(newAnswers);
-      
-      // 4. MBTI 타입이 정상적으로 계산되었는지 확인
-      console.log(`계산된 최종 MBTI 타입: ${finalType}`);
 
-      // 5. 결과 페이지로
       if (finalType) {
-        console.log(`결과 페이지(/result/${finalType})로 이동합니다!`);
         navigate(`/result/${finalType}`);
-      } else {
-        console.error("🚨 오류: 최종 MBTI 타입이 계산되지 않았습니다!");
       }
     }
   };
