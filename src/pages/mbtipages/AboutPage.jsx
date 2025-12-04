@@ -51,20 +51,56 @@ function AboutPage() {
 // css
 const styles = {
     container: {
-        padding: '40px 20px', backgroundColor: '#f8f9fa', minHeight: '100vh',
-        display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'Arial, sans-serif'
+        padding: '40px 20px',
+        backgroundColor: '#f8f9fa',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontFamily: 'Arial, sans-serif'
     },
     card: {
-        backgroundColor: '#fff', borderRadius: '20px', padding: '40px',
-        boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)', width: '90%', maxWidth: '800px'
+        backgroundColor: '#fff',
+        borderRadius: '20px',
+        padding: '40px',
+        boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+        width: '90%',
+        maxWidth: '800px'
     },
-    mainTitle: { textAlign: 'center', fontSize: '2.5rem', color: '#343a40', marginBottom: '20px' },
-    introText: { textAlign: 'center', fontSize: '1.2rem', color: '#6c757d', marginBottom: '40px', lineHeight: '1.8' },
-    section: { marginBottom: '30px', borderTop: '1px solid #e9ecef', paddingTop: '30px' },
-    sectionTitle: { fontSize: '1.8rem', color: '#007bff', marginBottom: '15px' },
+    mainTitle: {
+      textAlign: 'center',
+      fontSize: '2.5rem',
+      color: '#343a40',
+      marginBottom: '20px'
+    },
+    introText: {
+      textAlign: 'center',
+      fontSize: '1.2rem',
+      color: '#6c757d',
+      marginBottom: '40px',
+      lineHeight: '1.8'
+    },
+    section: {
+      marginBottom: '30px',
+      borderTop: '1px solid #e9ecef',
+      paddingTop: '30px'
+    },
+    sectionTitle: {
+      fontSize: '1.8rem',
+      color: '#007bff',
+      marginBottom: '15px'
+    },
     button: {
-        display: 'block', width: '100%', padding: '15px 30px', fontSize: '1.2rem', color: '#fff',
-        backgroundColor: '#007bff', border: 'none', borderRadius: '8px', cursor: 'pointer', marginTop: '40px'
+        display: 'block',
+        width: '100%',
+        padding: '15px 30px',
+        fontSize: '1.2rem',
+        color: '#fff',
+        backgroundColor: '#007bff',
+        border: 'none',
+        borderRadius: '8px',
+        cursor: 'pointer',
+        marginTop: '40px'
     }
 };
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import mainImage from '../assets/main-image.png'; //main image
+import mainImage from '../../assets/main-image.png'; //main image
 
-function MainPage() {
+function MbtiMainPage() {
   const navigate = useNavigate();
   const handleStart = () => {
     navigate('/quiz/1');
@@ -78,4 +78,4 @@ const styles = {
   }
 };
 
-export default MainPage;
+export default MbtiMainPage;
