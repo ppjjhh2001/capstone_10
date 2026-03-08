@@ -14,14 +14,6 @@ const db = mysql.createConnection({
     database: 'tourism_site'   
 });
 
-db.connect((err) => {
-    if (err) {
-        console.error('❌ MySQL 연결 실패:', err);
-    } else {
-        console.log('✅ MySQL 연결 성공 (친구 컴퓨터)');
-    }
-});
-
 app.get('/api/regional', (req, res) => {
     const sql = "SELECT * FROM tourist_spots";
     db.query(sql, (err, results) => {
@@ -43,8 +35,4 @@ app.get('/api/regional', (req, res) => {
         }));
         res.json(formatted);
     });
-});
-
-app.listen(3000, () => {
-    console.log('🚀 내 백엔드 서버 실행 중 (포트 3000)');
 });
